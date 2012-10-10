@@ -1,0 +1,11 @@
+PARTS File:
+-----------
+
+Everything is first tested before it is put together. 
+The first few parts are:
+
+1. Detect the OS of the server OSDetect.php
+
+2. Check if system command is enabled. isinfo.php
+
+3. Replicates itself.   mv.php
