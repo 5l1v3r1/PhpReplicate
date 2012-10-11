@@ -10,15 +10,19 @@ The first few parts are:
 
 3. Check if exec command is enabled. excinfo.php
 
+4. Check if backtick operator works. 
+I use ping -c 1 8.8.8.8 to show how external daemon /bin/ping is used from within a php script.
+The output demonstrates that it in fact works.
 
-4. Replicates itself.   mv.php ( Linux Routine )
+5. Replicates itself.   mv.php ( Linux Routine )
 
-5. Replicates itself.  cp.php (Windows Server Routine) Probably coded in powershell.
+6. Replicates itself.  cp.php (Windows Server Routine) Probably coded in powershell.
 
-6. Payload part
+7. IRC Command and Control center.
+   First I while just code something that connects to an IRC channel and reacts to one command.
 
-7. Part that chooses what to do based on OS detected.
+8. Part that chooses what to do based on OS detected.
 
-8. Entropy generator.
+9. Entropy generator.
 
-9. Obsufucation part
+10. Obsufucation part
