@@ -16,3 +16,6 @@ $nick = md5($rand);
 		--Gives server IP.
 		--Gives PHP version: $ php --version
 		--Gives server OS.
+
+<-- Can't figure out how to join irc via SSL in PHP yet.
+		Look at this code for ideas: https://github.com/flotwig/suphpbot/blob/master/ircbot.php
