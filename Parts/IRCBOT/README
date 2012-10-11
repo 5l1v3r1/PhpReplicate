@@ -8,3 +8,6 @@ the IRC bot and the IRC server.  The infected server will still have a weird out
 on either port 6667 or some other port related to IRC. The more the malicious php code spreads 
 on machines or a given machine the by replicating, the more connections to the IRC server their will be. Thus making
 it possible to control the compromised machine even if some of the code is removed.
+
+Most parts of the IRCBot will work on either windows or Linux, I will just have to adapt the command part to 
+the specific OS on the given server.
