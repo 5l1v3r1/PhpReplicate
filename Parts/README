@@ -8,4 +8,17 @@ The first few parts are:
 
 2. Check if system command is enabled. isinfo.php
 
-3. Replicates itself.   mv.php
+3. Check if exec command is enabled. excinfo.php
+
+
+4. Replicates itself.   mv.php ( Linux Routine )
+
+5. Replicates itself.  cp.php (Windows Server Routine) Probably coded in powershell.
+
+6. Payload part
+
+7. Part that chooses what to do based on OS detected.
+
+8. Entropy generator.
+
+9. Obsufucation part
