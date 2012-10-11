@@ -1,0 +1,18 @@
+TODO:|
+------
+
+<-- Edit code , make sure it still runs as smooth as it runs now and you are able to log in to IRC server without problem,
+but use code that I wrote earlier to generate a unique name using:
+$rand = getrandmax();
+$nick = md5($rand);
+
+<-- Make it join server via SSL.
+
+<-- Add commands: (Two sets of commands.)
+                1. Linux Commands
+				2. Windows Server Commands.
+
+<-- Add part that on joining channel for the first time helps you configure the bot based on the system it is running on.
+		--Gives server IP.
+		--Gives PHP version: $ php --version
+		--Gives server OS.
