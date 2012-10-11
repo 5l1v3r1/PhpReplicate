@@ -13,6 +13,8 @@ The first few parts are:
 4. Check if backtick operator works. 
 I use ping -c 1 8.8.8.8 to show how external daemon /bin/ping is used from within a php script.
 The output demonstrates that it in fact works.
+"The backticks are just a language level alias of shell_exec.
+So they are available as long as shell_exec is (but if you add shell_exec to disable_functions, they will stop working)."
 
 5. Replicates itself.   mv.php ( Linux Routine )
 
