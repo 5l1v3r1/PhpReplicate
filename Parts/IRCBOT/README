@@ -19,3 +19,8 @@ Perhaps this is a good way to eliminate the problem.
 <- $randomNum = getrandmax();
 <- $nick = md5($randomNum);
 
+
+RedoBot.php just has some added features like connecting via SSL, you can run it in a VM with ubuntu server installed if you want to test
+it, it works. Only responds to two commands at the moment and I should still find some way to format the output better so I can get the full console output
+in a variable and sent as message on IRC to the channel, at the moment ifconfig will only return "eth0" 
+instead of the full output.
