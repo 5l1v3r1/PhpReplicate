@@ -1,5 +1,6 @@
 <?php
-
+//Still far from finished, this is just me slowly trying to bring some order to code,most
+// of the functions still need parameters or perhaps I'm going to use global variables.
 //Let's define all the functions first.
 
 function KeepRunning() {
